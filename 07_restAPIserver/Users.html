@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .user-info {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .user-info h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .user-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="userContainer">
+        <!-- User information  displayed -->
+        
+    </div>
+
+    <script>
+        // Function to render user information
+        function renderUser(user) {
+            const userDiv = document.createElement('div');
+            userDiv.classList.add('user-info');
+            userDiv.innerHTML = `
+                <div class="user-info">
+                    <h2>User Information</h2>
+                    <p><strong>ID:</strong> ${user.id}</p>
+                    <p><strong>First Name:</strong> ${user.first_name}</p>
+                    <p><strong>Last Name:</strong> ${user.last_name}</p>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>Job Title:</strong> ${user.job_title}</p>
+                </div>
+            `;
+            return userDiv;
+        }
+
+        // Get the container element
+        const userContainer = document.getElementById("userContainer");
+
+        // Fetch JSON data from file
+        fetch('MOCK_DATA.json')
+        .then(response => response.json())
+        .then(data => {
+            // Create a document fragment to hold the user divs
+            const fragment = document.createDocumentFragment();
+
+            // Loop through the first 100 users and render their information
+            data.slice(0, 100).forEach(user => {
+                // Create userDiv for each user
+                const userDiv = renderUser(user);
+                // Append userDiv to the document fragment
+                fragment.appendChild(userDiv);
+            });
+
+            // Append the document fragment to the userContainer
+            userContainer.appendChild(fragment);
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+How Versioning works in NodeJS
+
+"dependencies": {
+    //version look like this
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+
+Version has three parts like : ^4.19.2
+1st part -> 4
+    Major Release / Breaking Update
+    //Your Code may run or not, due to Breaking Update
+
+2nd part -> 19
+    Recommended Bug Fix / Security Fix / New Feature Added
+
+3rd part -> 2
+    Minor Fixes, Optional Update -- mainly like typos
+
+Now, the Carrot Symbol ^
+        -- it is requiring the major version to be remain same , i.e: ^4 install the 4 version
+        When updating it can range from | 4.18.2 | < | 5.0.0 | , it can be eithr 18.3,19.5,19.0 etc
+
+Now, the tilde symbol ~
+        -- Not changing the first and second part version also , only the minor(3rd part) version can be updated
+

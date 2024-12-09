@@ -1,0 +1,12 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "This is the basic program of Nodejs",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run" : "ndoe hello.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

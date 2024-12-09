@@ -1,0 +1,66 @@
+--Intro to NodeJs--
+
+V8 engine + C++ = Node.js
+
+Now,Js can talk to native machine because of c++ , can create web server in JS too
+File handling can be done by JS
+
+So, Nodejs is a runtime environment for JS
+
+Long Term Support(LTS) / Stable release can be used for production 
+versioning style : Even version (LTS)
+.and for odd version it is of new version not suitable for production
+
+npm(Node Package Manager) by default automatically shipped to Node,  when installing Node.js
+
+To run Node.js program -- node program_name or node program_name.js
+
+npm init - makes template for the project , for running our project
+            --after initialiizing npm package.json is made where it is a configuration File
+        Making our own script for running the program
+        
+        "scripts": {
+            "run" : "n0de hello.js"
+        }
+
+        when npm run is entered automatically the node hello.js is runned
+
+[NOTE:- When node_modules folder is deleted the package.json have info of all dependencies 
+        install so installing npm in the dedicated directory will install the dependencies and make the node_modules folder]
+
+--About Modules--
+
+For Modular programming the code base should be devided into small code  called Modules
+so the code will be split into different file for seperation of concern of modules/program
+
+Look modules folder for program representation
+
+require() function has all the builtin package likfe http,fs from node directory
+require("fs") --> Search for fs module/package in node module directory
+require("./fs") --> Search for fs module/package in the current directory
+
+--About Filehandling--
+Look the Filehandling folder for understanding about file handling
+
+--About NodeJs Architecture--
+Look the NodejsArchitecture folder for understanding about NodejsArchitecture
+
+--About HTTP Server--
+Look the HTTPserver folder for understanding about HTTPserver and look ORL folder too for info about URL and query parameters working
+
+--About HTTP Methods--
+Look the HTTPmethods folder for understanding about HTTP Methods 
+
+--About Express Framework--
+Look the Express folder for understanding about express Framework
+
+--Look how the versioning works in versioning.txt file--
+
+--Look at restfullAPI and restAPIserver Folder--
+For understanding about routes , api, and many more
+
+--Look at Middleware folder and restAPIserver Folder--
+For understanding about how middleware works and its fucntioning in restAPIserver folder
+
+
+

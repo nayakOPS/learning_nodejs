@@ -1,0 +1,13 @@
+Client Makes request to a Server
+
+Event Loop Watches over the Event Queue for which event to run based on (FIFO) principle.
+
+The Event or Request can be Blocking Operations(Sync) or Non-Blocking Operation(Async),
+Event loop checks after whether the event is blocking operation or Non-blocking opeartion 
+If it is non-blocking operation then it is normally done by picking it from event Queue
+or If it is  blocking operation, then the event is gone to thread pool , the thread process our event/Operation to do
+
+Thread Pool Size depends upon CPU
+the default Thread Pool size is 4
+Max size = depends upon the server CPU core 
+-8 core Cpu - 8 threads available

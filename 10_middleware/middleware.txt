@@ -1,0 +1,12 @@
+| client {Request to Server} | ---> Middleware {The Request doesnot goes directly to the Server, It process something for validating the In coming request} ---> | Server {Response is sent to Client} |
+                                    |
+                                    |--> if the Middleware Processing Condition/Validation does not work the request is sent back to client
+
+Middleware is a function that process the Request and Response
+Multiple Middleware can be their
+
+Middleware functions can perform the following tasks:
+--Execute any code.
+--Make changes to the request and the response objects.
+--End the request-response cycle.
+--Call the next middleware function in the stack.

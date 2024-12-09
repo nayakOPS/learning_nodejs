@@ -1,0 +1,23 @@
+HTTP Protocol has no any SSL certificate
+HTTPS Protocol has SSL certificate
+
+preceeding by / is path after domain name
+we can have nested path to like this/is/the/nested/path
+
+Query Parameters
+--> they are the extra info which can be passed to the URL
+
+for bing
+https://www.bing.com/search?pglt=675&q=nepal&cvid=df92af1b672d4d15905ecff2ba8733bd&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOzIGCAMQRRg7MgYIBBBFGD0yBggFEEUYPTIGCAYQRRg90gEHODY1ajBqMagCALACAA&FORM=ANNTA1&PC=NMTS
+                           ^from herre the query parameter has started
+
+for youtube
+https://www.youtube.com/results?search_query=nepal
+
+External package should be installed to handle the query parameter
+It parse the url for us
+        npm i url
+
+the query retriever for youtube in case of searching would be like
+    const search = myurl.query.search_query
+    res.end("result for ", search)

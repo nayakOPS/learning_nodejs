@@ -1,0 +1,17 @@
+HTTP Headers
+    Headers are the info of the data packets (req,res), where the info about the data is stores is Headers\
+
+    HTTP Headers are an important part of the API request and response 
+    as they represent the meta-deta associated with the API request and response
+
+    Headers carry information for the request and response body
+
+    We, can set our own Headers , in such way
+
+    app.get("/api/users",(req,res) => {
+        // using setHeader you can set you own header
+        res.setHeader("X-myName","Binayak Kunwor")
+        //Always add X to custom Headers
+        res.json(users);
+    });
+

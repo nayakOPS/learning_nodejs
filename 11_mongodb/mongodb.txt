@@ -1,0 +1,23 @@
+MongoDB
+-No-SQLDocument Based Datbase
+-Strong Support for Aggregation Pipeline
+-Works on BSON format
+-Best for Node Applications
+
+MongoDB architecture
+as tables in SQL we have collections in MongoDB, wehre inside collections you have documents
+
+Connecting MongoDB with our Node.js Application 
+    --make sure your MongoDB services is running, mongosh
+    -- install a package called mongoose for connecting to Mongodb using Nodejs
+
+    Mongoose working procedure
+
+    Schema - Define the Structure
+    const userSchema = new mongoose.Schema({ --- })
+
+        Schema - Model
+        
+        Using Model we do CRUD operation
+
+    

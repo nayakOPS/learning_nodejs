@@ -1,0 +1,7 @@
+The Restfull API is the representational state of REST API 
+    which has certain rules and standard
+    works on Server and Client Architecture
+
+    Follow the HTTP methods as per the guidelines and per specific methods
+
+    
